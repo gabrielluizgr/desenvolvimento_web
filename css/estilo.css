@@ -1,0 +1,125 @@
+body {
+    --preto: #0e0c14;
+    --azul-Marinho: #2d6073;
+    --azul: #00a8c6;
+    margin: 0;
+    background-color: #f1f0ee!important;
+}
+
+nav .navbar-brand, nav .nav-link {
+    color: white;
+}
+
+nav .nav-link:hover {
+    color: var(--azul);
+    border-bottom: 1px solid var(--azul);
+}
+
+nav .container-fluid {
+    display: flex;
+    justify-content: space-between;
+}
+
+main .banner {
+    background-image: url(../img/bgum.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 500px;
+}
+
+main .banner h1, main .titulo {
+    font-weight: 900;
+    font-size: 50px;
+    font-family: 'Mulish', sans-serif;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+main .banner h1 {
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+    font-size: 70px;
+}
+
+main .container-jogos {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
+    margin-bottom: 10px;
+}
+
+main .img-jogo {
+    height: 300px;
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+main .card {
+    padding: 30px;
+    border-radius: 12px;
+}
+
+main .card:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+.container-sobre {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.815);
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+}
+
+.container-sobre h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.container-sobre h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+.container-sobre p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+#container_formulario {
+    border-radius: 10px;
+}
+#container_titulo {
+    margin-left: -15px;
+    margin-right: -15px;
+    border-radius: 10px 10px 0 0;
+}
+
+@media screen and (max-width: 575px) {
+    #container_formulario {
+        max-width: 95%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main .banner {
+        background-size: 100%;
+        background-attachment: scroll;
+        height: 250px;
+    }
+
+    main .banner-2 {
+        display: none;
+    }
+}
+

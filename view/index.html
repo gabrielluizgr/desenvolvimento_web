@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>IngressosFut</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="../img/logo_bola.png">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <script src="../js/index.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="index.html">IngressosFut</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Alternar navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cadastrar_jogos.html">Cadastro de Jogos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="comprar_ingressos.html">Comprar Ingressos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre.html">Sobre</a>
+                    </li>
+                </ul>
+
+                <form class="d-flex" role="search" onsubmit="return false;">
+                    <input id="campo-pesquisa"
+                           class="form-control me-2"
+                           type="search"
+                           placeholder="Pesquisar jogos..."
+                           aria-label="Pesquisar">
+                    <button class="btn btn-outline-light" type="button" id="btn-limpar-pesquisa">
+                        Limpar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="flex-grow-1">
+    <section class="w-100 banner d-flex align-items-center">
+        <div class="container d-flex justify-content-between align-items-center flex-column text-center">
+            <h1 class="text-white fw-bold mb-0">IngressosFut</h1>
+            <h3 class="text-white fw-bold mb-0">Comprar Ingressos Online</h3>
+        </div>
+    </section>
+
+    <section class="py-4">
+        <div class="container">
+            <div class="row w-100 d-flex justify-content-center">
+                <h1 class="titulo text-center">Jogos</h1>
+            </div>
+        </div>
+    </section>
+
+    <div class="d-flex justify-content-center mb-5">
+        <select id="ordenar-jogos" class="form-select w-auto">
+            <option value="data-asc">Data mais próxima</option>
+            <option value="data-desc">Data mais distante</option>
+            <option value="titulo-asc">Título A-Z</option>
+            <option value="titulo-desc">Título Z-A</option>
+        </select>
+    </div>
+
+    <!-- LISTA DE JOGOS -->
+    <section class="container container-jogos pb-5">
+        <div class="row g-4" id="lista-jogos">
+
+            <!-- JOGO 01 -->
+            <div class="col-12 col-md-6 coluna-jogo card border-0 p-0 bg-transparent"
+                 data-id="1"
+                 data-titulo="Internacional x Corinthians"
+                 data-descricao="Jogo entre Internacional (RS) x Corinthians (SP) válido pelo Campeonato Brasileiro."
+                 data-inicio="2025-12-15T19:00:00"
+                 data-local="Porto Alegre - RS">
+                <div class="card-body">
+                    <img class="img-jogo img-fluid rounded mb-3"
+                         src="../img/jogo1.jpg"
+                         alt="Estádio Beira-Rio">
+
+                    <h3 class="h3">Internacional (RS) x Corinthians (SP)</h3>
+                    <p class="mb-1 text-muted small">
+                        <strong>Local:</strong> Porto Alegre - RS
+                    </p>
+                    <p class="mb-2">
+                        Jogo entre Internacional (RS) x Corinthians (SP) válido pelo Campeonato Brasileiro.
+                    </p>
+
+                    <p class="mb-1"><strong>Início:</strong> 15/12/2025 19:00</p>
+                    <p class="text-muted small mb-2" data-contador="2025-12-15T19:00:00"></p>
+
+                    <div class="d-flex w-100 justify-content-end mt-2">
+                        <a href="https://ge.globo.com/rs/futebol/brasileirao-serie-a/noticia/2025/10/01/internacional-x-corinthians-onde-assistir-ao-vivo-horario-e-escalacoes.ghtml"
+                            class="btn btn-secondary me-2 btn-detalhes"
+                            role="button" target="_blank">
+                            Detalhes
+                        </a>
+                        <button type="button" class="btn btn-sm btn-outline-warning me-2 btn-favorito">
+                            ⭐
+                        </button>
+                        <a href="comprar_ingressos.html" class="btn btn-success">
+                            Comprar Ingressos
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- JOGO 02 -->
+            <div class="col-12 col-md-6 coluna-jogo card border-0 p-0 bg-transparent"
+                 data-id="2"
+                 data-titulo="Grêmio (RS) x Flamengo (RJ)"
+                 data-descricao="Jogo entre Grêmio (RS) x Flamengo (RJ) válido pelo Campeonato Brasileiro."
+                 data-inicio="2025-12-20T21:30:00"
+                 data-local="Porto Alegre - RS">
+                <div class="card-body">
+                    <img class="img-jogo img-fluid rounded mb-3"
+                         src="../img/jogo2.jpg"
+                         alt="Arena do Grêmio">
+
+                    <h3 class="h3">Grêmio (RS) x Flamengo (RJ)</h3>
+                    <p class="mb-1 text-muted small">
+                        <strong>Local:</strong> Porto Alegre - RS
+                    </p>
+                    <p class="mb-2">
+                        Jogo entre Grêmio (RS) x Flamengo (RJ) válido pelo Campeonato Brasileiro.
+                    </p>
+
+                    <p class="mb-1"><strong>Início:</strong> 20/12/2025 21:30</p>
+                    <p class="text-muted small mb-2" data-contador="2025-12-20T21:30:00" ></p>
+
+                    <div class="d-flex w-100 justify-content-end mt-2">
+                        <a href="https://ge.globo.com/rs/futebol/brasileirao-serie-a/noticia/2025/04/13/gremio-x-flamengo-onde-assistir-ao-vivo-horario-e-escalacoes.ghtml"
+                            class="btn btn-secondary me-2 btn-detalhes"
+                            role="button" target="_blank">
+                            Detalhes
+                        </a>
+                        <button type="button" class="btn btn-sm btn-outline-warning me-2 btn-favorito">
+                            ⭐
+                        </button>
+                        <a href="comprar_ingressos.html" class="btn btn-success">
+                            Comprar Ingressos
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- JOGO 03 -->
+            <div class="col-12 col-md-6 coluna-jogo card border-0 p-0 bg-transparent"
+                 data-id="3"
+                 data-titulo="São Paulo (SP) X Santos (SP)"
+                 data-descricao="Jogo entre São Paulo (SP) x Santos (SP) válido pelo Campeonato Brasileiro."
+                 data-inicio="2025-12-22T20:00:00"
+                 data-local="São Paulo - SP">
+                <div class="card-body">
+                    <img class="img-jogo img-fluid rounded mb-3"
+                         src="../img/jogo3.jpg"
+                         alt="Estádio Morumbi">
+
+                    <h3 class="h3">São Paulo (SP) x Santos (SP)</h3>
+                    <p class="mb-1 text-muted small">
+                        <strong>Local:</strong> São Paulo - SP
+                    </p>
+                    <p class="mb-2">
+                        Jogo entre São Paulo (SP) x Santos (SP) válido pelo Campeonato Brasileiro.
+                    </p>
+
+                    <p class="mb-1"><strong>Início:</strong> 22/12/2025 20:00</p>
+                    <p class="text-muted small mb-2" data-contador="2025-12-22T20:00:00"></p>
+                    <div class="d-flex w-100 justify-content-end mt-2">
+                        <a href="https://ge.globo.com/futebol/brasileirao-serie-a/noticia/2025/04/20/sao-paulo-x-santos-onde-assistir-ao-vivo-horario-e-escalacoes.ghtml"
+                            class="btn btn-secondary me-2 btn-detalhes"
+                            role="button" target="_blank">
+                            Detalhes
+                        </a>
+
+                        <button type="button" class="btn btn-sm btn-outline-warning me-2 btn-favorito">
+                            ⭐
+                        </button>
+
+                        <a href="comprar_ingressos.html" class="btn btn-success">
+                            Comprar Ingressos
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- JOGO 04 -->
+            <div class="col-12 col-md-6 coluna-jogo card border-0 p-0 bg-transparent"
+                 data-id="4"
+                 data-inicio="2025-12-24T19:30:00"
+                 data-titulo="Atlético Mineiro (MG) x Cruzeiro (MG)"
+                 data-descricao="Jogo entre Atlético Mineiro (MG) x Cruzeiro (MG) válido pelo Campeonato Brasileiro."
+                 data-local="Belo Horizonte - MG">
+                <div class="card-body">
+                    <img class="img-jogo img-fluid rounded mb-3"
+                         src="../img/jogo4.jpg"
+                         alt="Arena MRV">
+
+                    <h3 class="h3">Atlético Mineiro (MG) x Cruzeiro (MG)</h3>
+                    <p class="mb-1 text-muted small">
+                        <strong>Local:</strong> Belo Horizonte - MG
+                    </p>
+                    <p class="mb-2">
+                        Jogo entre Atlético Mineiro (MG) x Cruzeiro (MG) válido pelo Campeonato Brasileiro.
+                    </p>
+
+                    <p class="mb-1"><strong>Início:</strong> 25/12/2025 19:30</p>
+                    <p class="text-muted small mb-2" data-contador="2025-12-24T19:30:00"></p>
+
+                    <div class="d-flex w-100 justify-content-end mt-2">
+                        <a href="https://ge.globo.com/mg/futebol/brasileirao-serie-a/noticia/2025/10/15/atletico-mg-x-cruzeiro-onde-assistir-ao-vivo-horario-e-escalacoes.ghtml"
+                            class="btn btn-secondary me-2 btn-detalhes"
+                            role="button" target="_blank">
+                            Detalhes
+                        </a>
+                        <button type="button" class="btn btn-sm btn-outline-warning me-2 btn-favorito">
+                            ⭐
+                        </button>
+                        <a href="comprar_ingressos.html" class="btn btn-success">
+                            Comprar Ingressos
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="w-100 banner-2 align-items-center">
+    </section>
+</main>
+
+<footer class="bg-dark text-white d-flex justify-content-center py-3 mt-auto">
+    <p class="mb-0">IngressosFut</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
