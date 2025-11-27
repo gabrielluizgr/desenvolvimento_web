@@ -21,7 +21,7 @@ nav .container-fluid {
 }
 
 main .banner {
-    background-image: url(/img/bgum.jpg);
+    background-image: url(../img/bgum.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
